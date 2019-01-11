@@ -10,10 +10,10 @@ async function login(){
     .click('div[id="identifierNext"]')
     .type(process.env.USER_PW, '.whsOnd.zHQkBf')
     .click('div[id="passwordNext"]')
-    .wait('.status')
+    .wait('div[class="ds"]')
     .screenshot()
 
-  await chromless.end()
+  await chromeless.end()
 }
 
 login().catch(console.error.bind(console))
